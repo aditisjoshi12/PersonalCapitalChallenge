@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">PersonalCapital</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_base">BaseActivity</string>
+    <string name="title_activity_web_view">WebViewActivity</string>
+    <string name="loading_message">Loading your articles</string>
+    <string name="feed_title">My Feed</string>
+    <string name="article_sync_error_message">There was an error getting the most recent articles, please try again later!</string>
+    <string name="network_error_message">There was an error getting the most recent articles, please check if your internet connection!"</string>
+
+</resources>
