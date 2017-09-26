@@ -52,15 +52,17 @@ public class HeaderView {
         title.setLayoutParams(viewParams);
         title.setTextSize(TypedValue.COMPLEX_UNIT_SP, 16);
         title.setPadding((int) context.getResources().getDimension(R.dimen.article_padding), (int) context.getResources().getDimension(R.dimen.article_padding), (int) context.getResources().getDimension(R.dimen.article_padding), (int) context.getResources().getDimension(R.dimen.article_padding));
-
+        title.setTextColor(UIHelper.getInstance().getColor(context,R.color.black));
         summary = new TextView(context);
         summary.setLayoutParams(viewParams);
         summary.setMaxLines(3);
         summary.setPadding((int) context.getResources().getDimension(R.dimen.article_padding), (int) context.getResources().getDimension(R.dimen.article_padding), (int) context.getResources().getDimension(R.dimen.article_padding), (int) context.getResources().getDimension(R.dimen.article_padding));
+        summary.setTextColor(UIHelper.getInstance().getColor(context,R.color.black));
 
         timestamp = new TextView(context);
         timestamp.setLayoutParams(viewParams);
         timestamp.setPadding((int) context.getResources().getDimension(R.dimen.article_padding), (int) context.getResources().getDimension(R.dimen.article_padding), (int) context.getResources().getDimension(R.dimen.article_padding), (int) context.getResources().getDimension(R.dimen.article_padding));
+        timestamp.setTextColor(UIHelper.getInstance().getColor(context,R.color.black));
 
         outerLayout.addView(thumbnail);
         outerLayout.addView(title);

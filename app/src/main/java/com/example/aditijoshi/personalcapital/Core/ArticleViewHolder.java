@@ -46,10 +46,12 @@ public class ArticleViewHolder extends RecyclerView.ViewHolder {
 
         timestamp = new TextView(context);
         timestamp.setPadding((int) context.getResources().getDimension(R.dimen.article_padding), (int) context.getResources().getDimension(R.dimen.article_padding), (int) context.getResources().getDimension(R.dimen.article_padding), (int) context.getResources().getDimension(R.dimen.article_padding));
+        timestamp.setTextColor(UIHelper.getInstance().getColor(context,R.color.black));
 
         title = new TextView(context);
         title.setTextSize(TypedValue.COMPLEX_UNIT_SP, 16);
         title.setPadding((int) context.getResources().getDimension(R.dimen.article_padding), (int) context.getResources().getDimension(R.dimen.article_padding), (int) context.getResources().getDimension(R.dimen.article_padding), (int) context.getResources().getDimension(R.dimen.article_padding));
+        title.setTextColor(UIHelper.getInstance().getColor(context,R.color.black));
 
         outerLayout.addView(thumbnail);
         outerLayout.addView(title);
