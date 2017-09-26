@@ -9,7 +9,7 @@ Improvements I would make
 * "Recommended for you" section.
 
 
-Code improvements :-
+Optimization :-
 * DB optimization :- I am storing the articles locally for offline support for people to come to a cached copy of article metadata rather than a blank screen. However, I currently delete and reinsert into the db after every network fetch, instead I would store them based on a key and simply update articles that were already fetched.
 
 
