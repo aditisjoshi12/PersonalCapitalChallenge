@@ -1,17 +1,13 @@
 package com.example.aditijoshi.personalcapital.NetworkUtils;
 
 
-
 import java.io.IOException;
-import java.io.StringReader;
-import java.util.ArrayList;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
 import de.greenrobot.event.EventBus;
-import okhttp3.Interceptor;
 import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -54,6 +50,8 @@ public class HttpRequest {
     // ONLY OPTIMIZED FOR GET REQUESTS, IDEALLY call should be based on method parameter
     private void makeRequest(final String method, final String url, final int localTimeout,
                              final String requestBody, final HTTPResponseHandler handler) {
+
+
         executorService.submit(new Callable<Void>() {
             @Override
             public Void call() {

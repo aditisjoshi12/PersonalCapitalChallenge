@@ -1,7 +1,6 @@
 package com.example.aditijoshi.personalcapital.Core;
 
 import android.app.ProgressDialog;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
@@ -23,13 +22,10 @@ import android.widget.Toast;
 import com.example.aditijoshi.personalcapital.DataModel.Article;
 import com.example.aditijoshi.personalcapital.NetworkUtils.ArticleSyncFailedEvent;
 import com.example.aditijoshi.personalcapital.NetworkUtils.ArticleSyncFinishedEvent;
-
 import com.example.aditijoshi.personalcapital.NetworkUtils.NetworkHelper;
-import com.example.aditijoshi.personalcapital.NetworkUtils.XMLParser;
-import com.example.aditijoshi.personalcapital.R;
 import com.example.aditijoshi.personalcapital.NetworkUtils.NoNetworkConnectionEvent;
+import com.example.aditijoshi.personalcapital.R;
 import com.example.aditijoshi.personalcapital.db.DatabaseHandler;
-
 
 import java.util.ArrayList;
 

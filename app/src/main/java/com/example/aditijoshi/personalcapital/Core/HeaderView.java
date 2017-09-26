@@ -12,10 +12,6 @@ import android.widget.TextView;
 import com.example.aditijoshi.personalcapital.DataModel.Article;
 import com.example.aditijoshi.personalcapital.R;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 import de.greenrobot.event.EventBus;
 
 /**

@@ -1,13 +1,10 @@
 package com.example.aditijoshi.personalcapital.Core;
 
-import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.DisplayMetrics;
-import android.util.Log;
 
-import com.example.aditijoshi.personalcapital.NetworkUtils.HttpRequest;
 import com.example.aditijoshi.personalcapital.R;
 
 import de.greenrobot.event.EventBus;
@@ -40,8 +37,8 @@ public class BaseActivity extends AppCompatActivity {
     //Unsubscribe from event listener every time app is foregrounded
     @Override
     public void onDestroy() {
-      super.onDestroy();
-      unsubscribe();
+        super.onDestroy();
+        unsubscribe();
     }
 
     //Subscribing to event listener every time app is foregrounded

@@ -1,9 +1,5 @@
 package com.example.aditijoshi.personalcapital.NetworkUtils;
 
-import com.example.aditijoshi.personalcapital.DataModel.Article;
-
-import java.util.ArrayList;
-
 /**
  * Created by aditijoshi on 9/24/17.
  */

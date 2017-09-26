@@ -38,6 +38,8 @@ public class UIHelper {
         return mInstance;
     }
 
+    // cache images in memory and expire every 48 hours so that if the image already exists we
+    // can skip having to download it again.
     public DisplayImageOptions rectangularDisplayOption = new DisplayImageOptions.Builder()
 //            .showImageOnLoading(R.drawable)
 //            .showImageForEmptyUri(R.drawable.bg_channel)
@@ -49,10 +51,9 @@ public class UIHelper {
             .imageScaleType(ImageScaleType.EXACTLY)
             .build();
 
-    public void displayImage(String url, ImageView view, DisplayImageOptions displayOptions, ImageLoadingListener listener) {
-        // L.disableLogging();
-        // This image config has optimized image loading quite a bit without having to mess with the cache sizes
 
+
+    public void displayImage(String url, ImageView view, DisplayImageOptions displayOptions, ImageLoadingListener listener) {
 
         File cacheDir = StorageUtils.getCacheDirectory(view.getContext());
         ImageLoaderConfiguration.Builder config = new ImageLoaderConfiguration.Builder(view.getContext());
@@ -60,6 +61,7 @@ public class UIHelper {
         config.denyCacheImageMultipleSizesInMemory();
         config.diskCacheFileNameGenerator(new Md5FileNameGenerator());
         config.diskCacheSize(50 * 1024 * 1024);
+
         // Expire image disk cache after 48 hours
         config.diskCache(new LimitedAgeDiskCache(cacheDir, 48 * 60 * 60));
         config.tasksProcessingOrder(QueueProcessingType.LIFO);
@@ -79,6 +81,7 @@ public class UIHelper {
 
     public String formatDate(String date) {
 
+        // Date formatter to convert the date returned from the xml to a readable string.
         SimpleDateFormat gsdf = new SimpleDateFormat("EEE, d MMM yyyy HH:mm:ss Z");
         SimpleDateFormat sdf = new SimpleDateFormat("EEE, MMM d");
         try {

@@ -1,9 +1,8 @@
 package com.example.aditijoshi.personalcapital.NetworkUtils;
 
-import java.io.IOException;
+import android.util.Log;
 
-import java.io.StringReader;
-import java.util.ArrayList;
+import com.example.aditijoshi.personalcapital.DataModel.Article;
 
 import org.w3c.dom.CharacterData;
 import org.w3c.dom.Document;
@@ -14,9 +13,9 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
-import android.util.Log;
-
-import com.example.aditijoshi.personalcapital.DataModel.Article;
+import java.io.IOException;
+import java.io.StringReader;
+import java.util.ArrayList;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -64,7 +63,7 @@ public class XMLParser {
 // looping through all item nodes <item>
         for (int i = 0; i < nl.getLength(); i++) {
             String sTitle = getValue((Element) nl.item(i), title); // name child value
-            String sLink = getValue((Element) nl.item(i), link); // cost child value
+            String sLink = getValue((Element) nl.item(i), link); // link child value
 
             String sDescription = getValue((Element) nl.item(i), description); // description child value
             String sImageURL = getValue((Element) nl.item(i), imageURL); // description child value
@@ -94,6 +93,7 @@ public class XMLParser {
                         return ((CharacterData) child).getData();
                     }
                 }
+                // get properties for the image url t(media:content) tag and get url property value
             } else if (elem.getNodeName().equals(imageURL)) {
                 NamedNodeMap attr = elem.getAttributes();
                 Node nodeAttr = attr.getNamedItem(imageURLProperty);

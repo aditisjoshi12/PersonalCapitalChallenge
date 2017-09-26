@@ -1,29 +1,20 @@
 package com.example.aditijoshi.personalcapital.Core;
 
-import android.os.Bundle;
-import android.support.design.widget.CoordinatorLayout;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.View;
-
-import com.example.aditijoshi.personalcapital.NetworkUtils.NoNetworkConnectionEvent;
-import com.example.aditijoshi.personalcapital.R;
-
 import android.annotation.TargetApi;
 import android.content.Intent;
-
 import android.os.Build;
+import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-
 import android.view.ViewGroup;
 import android.webkit.WebChromeClient;
-
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.LinearLayout;
+
+import com.example.aditijoshi.personalcapital.NetworkUtils.NoNetworkConnectionEvent;
+import com.example.aditijoshi.personalcapital.R;
 
 
 public class WebViewActivity extends BaseActivity {
@@ -115,11 +106,6 @@ public class WebViewActivity extends BaseActivity {
 
     }
 
-    private void setBackButtonColor() {
-        // final Drawable upArrow = UIHelper.getDrawable(this, R.drawable.btn_back);
-        // upArrow.setColorFilter(UIHelper.getColor(this, R.color.black), PorterDuff.Mode.SRC_ATOP);
-        // getSupportActionBar().setHomeAsUpIndicator(upArrow);
-    }
 
     public void onDestroy() {
         webView.loadUrl("about:blank");

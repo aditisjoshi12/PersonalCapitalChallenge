@@ -8,7 +8,6 @@ import com.example.aditijoshi.personalcapital.db.DatabaseHandler;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.concurrent.Executors;
 
 import de.greenrobot.event.EventBus;
 import okhttp3.Response;
@@ -36,6 +35,7 @@ public class NetworkHelper {
 
         String requestURL = "https://blog.personalcapital.com/feed/?cat=3,891,890,68,284";
 
+        // making a request to get feed from the above requestURL
         HttpRequest.getInstance().post(requestURL, 20, new HTTPResponseHandler() {
 
 
