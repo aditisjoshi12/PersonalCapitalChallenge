@@ -37,6 +37,14 @@ public class BaseActivity extends AppCompatActivity {
         }
     }
 
+    //Unsubscribe from event listener every time app is foregrounded
+    @Override
+    public void onDestroy() {
+      super.onDestroy();
+      unsubscribe();
+    }
+
+    //Subscribing to event listener every time app is foregrounded
     @Override
     protected void onResume() {
         super.onResume();
